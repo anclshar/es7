@@ -9,7 +9,7 @@ Vue.component('search-el', {
             let regexp  = new RegExp(this.userSearch, 'i')
             this.filtered = this.products.filter(el => regexp.test(el.product_name))
         }
-    },
+    }, 
     template: `
     <form action="#" class="search-form" @submit.prevent="$parent.$refs.products.filter(userSearch)">
         <input type="text" class="search-field" v-model="userSearch">
