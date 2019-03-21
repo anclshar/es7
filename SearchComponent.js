@@ -4,20 +4,10 @@ Vue.component('search-el', {
             userSearch: ''
         }
     },
-    method: {
+    methods: {
         filter(){
             let regexp  = new RegExp(this.userSearch, 'i')
             this.filtered = this.products.filter(el => regexp.test(el.product_name))
-        }
-    },
-    mounted(){
-        getJson(url)
-        {
-            return fetch(url)
-                .then(result => result.json())
-                .catch(error => {
-                    console.log(error)
-                })
         }
     },
     template: `
