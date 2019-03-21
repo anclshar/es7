@@ -18,3 +18,4 @@ Vue.component('search-el', {
         </button>
     </form>`
 })
+ 
